@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Shipper</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to shippers_path, class: button_class(theme: "transparent") do %>
+      All Shippers
+      <% end %>
+      <%= link_to edit_shipper_path(@shipper), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @shipper.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Phone:</p>
+        <p><%= @shipper.phone %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Company:</p>
+        <p><%= @shipper.company %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Rating:</p>
+        <p><%= @shipper.rating %></p>
+      </li>
+  </ul>
+</div>
